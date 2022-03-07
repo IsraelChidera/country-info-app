@@ -1,0 +1,30 @@
+.singleCountryPage {
+    margin-top: 3rem;
+}
+
+.spanTopic {
+    font-weight: 800;
+}
+
+.singleCountry {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1.4rem;
+    padding: 2rem;
+}
+
+.singleCountry h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.countryFlag img {
+    width: 600px;
+}
+
+.countryDetailsFlexed {
+    display: flex;
+    justify-content: space-between;
+}
+
+
