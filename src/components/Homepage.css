@@ -1,0 +1,72 @@
+.homepage {
+    background: var(--Very-Light-Gray);
+    margin-top: 10px;
+}
+
+.homepageFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+}
+
+.homepageFlexForm input {
+    padding: 1rem 5px 1rem 1.5rem;
+    width: 130%;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+}
+
+.homepageFlexForm input:focus {
+    border: none;
+    outline: var(--White);
+}
+
+.homepageFlexForm form {
+    position: relative;
+}
+
+.homepageFlexForm label {
+    position: absolute;
+    top: 25%;
+    left: 5px;
+}
+
+.homepageFlexForm select {
+    padding: 1rem 5px 1rem 5px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+}
+
+.countryDetails {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 3rem;
+}
+
+.countryData {    
+    margin: 1rem;    
+    background: var(--White);
+}
+
+.countryData ul, .countryData p {
+    font-size: 14px;
+}
+
+.countryData ul {
+    list-style: none;
+}
+
+.flag img {    
+    width: 100%;
+    height: 172px;    
+}
+
+.dataDetails {
+    padding: 1rem;
+}
+
+.countryName {
+    font-size: 18px;
+    font-weight: 800;
+}

@@ -1,23 +1,35 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
 import './App.css';
+import Homepage from './components/Homepage';
+import Navbar from './components/Navbar';
+import axios from 'axios';
+import Filter from './components/Filter';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Country from './components/Country';
 
 function App() {
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(()=> {
+    axios("https://restcountries.com/v2/all")
+        .then ((response) => {
+            console.log(response.data);
+            setData(response.data);
+            // console.log("dta", setData());            
+        })
+  },[])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      < Navbar />
+      < Filter />
+      <Routes>
+        <Route exact path="/" element={< Homepage data={data} />  }/>  
+        <Route path="/countries/:name" element={ <Country/> } />               
+      </Routes>
+
     </div>
   );
 }
